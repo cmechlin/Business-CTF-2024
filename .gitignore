@@ -1,0 +1,8 @@
+.venv
+.obsidian
+*.zip
+**/*.zip
+**/*.pyc
+**/*.msi
+**/*.exe
+**/node_modules

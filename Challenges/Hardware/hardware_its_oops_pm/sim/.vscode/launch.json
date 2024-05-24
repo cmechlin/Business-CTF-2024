@@ -1,0 +1,35 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chrome",
+      "type": "chrome",
+      "request": "launch",
+      "runtimeExecutable": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+      "runtimeArgs": [
+        "--profile-directory=debug-profile",
+        "--auto-open-devtools-for-tabs"
+      ],
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Server",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run dev"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug",
+      "configurations": ["Server", "Chrome"],
+      "presentation": {
+        "order": 1
+      }
+    }
+  ]
+}
